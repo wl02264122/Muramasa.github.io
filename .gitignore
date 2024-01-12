@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
+dist/
 dist
 dist-ssr
 coverage
@@ -28,3 +29,18 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# 自用
+.vscode
+node_modules
+public
+scr
+base.css
+index.html
+jsconfig.json
+package-lock.json
+package.json
+README.md
+vite.config.js
+
+!dist/
