@@ -30,10 +30,40 @@ npm run build
 ```
 
 ### Github push
-echo "# Muramasa.io" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/wl02264122/Muramasa.io.git
+git remote add origin https://github.com/wl02264122/Muramasa.github.io.git
 git push -u origin main
+
+gh-pages
+
+### 建立並切換到 gh-pages 分支：
+git checkout -b gh-pages
+### 將 dist 目錄的內容添加到暫存區
+git add dist/
+### 提交變更到 gh-pages 分支
+git commit -m "Add dist for GitHub Pages"
+### 推送到遠端的 gh-pages 分支
+git push origin gh-pages
+
+### 如果你之前已經有了 gh-pages 分支，你可以使用以下命令直接切換到 gh-pages 分支，然後再進行上述的 git add、git commit、git push 步驟：
+
+git checkout gh-pages
+
+### 簡化
+### 1.在主目錄下執行 npm run build。
+### 2.執行以下 Git 指令：
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/wl02264122/Muramasa.github.io.git
+git push -u origin main
+
+### 接下來，直接切換到 gh-pages 分支，將 dist 目錄的內容添加到暫存區，並推送到 GitHub： 
+git checkout -b gh-pages
+git add dist/
+git commit -m "Add dist for GitHub Pages"
+git push origin gh-pages
