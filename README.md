@@ -39,10 +39,13 @@ git push -u origin main
 
 gh-pages
 
-### 建立並切換到 gh-pages 分支：
-git checkout -b gh-pages
+### Vite用
+### git 切換分支
+git checkout main
+### 創建 GitHub Pages 分支
+git checkout --orphan gh-pages
 ### 將 dist 目錄的內容添加到暫存區
-git add dist/
+git add dist
 ### 提交變更到 gh-pages 分支
 git commit -m "Add dist for GitHub Pages"
 ### 推送到遠端的 gh-pages 分支
@@ -64,6 +67,6 @@ git push -u origin main
 
 ### 接下來，直接切換到 gh-pages 分支，將 dist 目錄的內容添加到暫存區，並推送到 GitHub： 
 git checkout -b gh-pages
-git add dist/
+git add -f dist/
 git commit -m "Add dist for GitHub Pages"
 git push origin gh-pages
